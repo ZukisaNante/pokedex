@@ -1,3 +1,4 @@
+//declare variables
 const input = document.getElementById("input");
 const sprites = document.getElementById("sprites");
 const stats = document.getElementById("stats");
@@ -27,3 +28,5 @@ function updatePokedex(pokeEntry) {
      moves.innerHTML =
           pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
 }
+// next button function
+function nextPokemonButton() {}
