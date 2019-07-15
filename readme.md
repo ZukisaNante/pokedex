@@ -1,1 +1,5 @@
 #Pokedex
+
+zukisa
+
+
