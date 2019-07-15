@@ -1,9 +1,11 @@
 * {
      margin: 0px;
-     font-size: 24px;
+     font-size: 20px;
      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
      line-height: 1.2rem;
      text-align: center;
+     text-transform: capitalize;
+
      color: rgb(50, 34, 145);
 }
 
@@ -18,8 +20,8 @@ body {
      margin: auto;
      justify-content: center;
      align-items: center;
-     width: 18rem;
-     height: 36rem;
+     width: 20rem;
+     height: 40rem;
      background-image: url("../img/pokedex.png");
      background-size: cover;
      background-repeat: no-repeat;
@@ -28,7 +30,7 @@ body {
 .container {
      position: relative;
      justify-content: center;
-     margin: 0 auto;
+     margin-bottom: 3rem;
 }
 
 #sprites {
@@ -36,4 +38,19 @@ body {
      height: auto;
      background-size: cover;
      background-repeat: no-repeat;
+}
+
+#number {
+     font-size: 0.8rem;
+}
+
+#name {
+     font-size: 1.4rem;
+}
+#type {
+     margin-top: 0.5rem;
+}
+
+#moves {
+     margin-top: 0.8rem;
 }
