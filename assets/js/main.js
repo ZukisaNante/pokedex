@@ -4,6 +4,7 @@ const stats = document.getElementById("stats");
 const number = document.getElementById("number");
 const name = document.getElementById("name");
 const moves = document.getElementById("moves");
+const type = document.getElementById("type");
 
 input.addEventListener("keyup", key => {
      let pokemon = input.value.toLowerCase();
@@ -22,6 +23,7 @@ async function getPokedex(input) {
 function updatePokedex(pokeEntry) {
      sprites.src = pokeEntry.sprites.front_default;
      name.innerHTML = "n°" + pokeEntry.id + " " + pokeEntry.species.name;
+     //  type.innerHTML = pokeEntry.types
      moves.innerHTML =
           pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
 }
