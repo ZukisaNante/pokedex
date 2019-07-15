@@ -1,4 +1,36 @@
 * {
-  margin: O;
+  margin: 0px;
+  font-size: 24px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+#pokedex {
+  position: relative;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 800px;
+  background-image: url("../img/pokedex.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#sprites {
+  width: 8rem;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=style.css.map */
