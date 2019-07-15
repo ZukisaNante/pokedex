@@ -23,12 +23,18 @@ async function getPokedex(input) {
 
 function updatePokedex(pokeEntry) {
     sprites.src = pokeEntry.sprites.front_default;
-    name.innerHTML = "nÂ°" + pokeEntry.id + " " + pokeEntry.species.name;
+    name.innerHTML = "n°" + pokeEntry.id + " " + pokeEntry.species.name;
     //  type.innerHTML = pokeEntry.types
     moves.innerHTML =
         pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
 }
 // next button function
-function nextPokemonButton() {}
+document.getElementsByClassName("nextPokemon").addEventListener("click", showSprite);
 
-console.log('lol');
+function showSprite() {
+    document.getElementById('sprites').innerHTML = pokeEntry.id + 1;
+}
+
+//}
+
+//nextPokemonButton();
