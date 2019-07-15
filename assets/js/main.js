@@ -8,25 +8,27 @@ const moves = document.getElementById("moves");
 const type = document.getElementById("type");
 
 input.addEventListener("keyup", key => {
-     let pokemon = input.value.toLowerCase();
-     if (key.keyCode == 13) {
-          getPokedex(pokemon);
-     }
+    let pokemon = input.value.toLowerCase();
+    if (key.keyCode == 13) {
+        getPokedex(pokemon);
+    }
 });
 
 async function getPokedex(input) {
-     let request = `https://pokeapi.co/api/v2/pokemon/${input}`;
-     let response = await fetch(request);
-     let pokeEntry = await response.json();
-     await updatePokedex(pokeEntry);
+    let request = `https://pokeapi.co/api/v2/pokemon/${input}`;
+    let response = await fetch(request);
+    let pokeEntry = await response.json();
+    await updatePokedex(pokeEntry);
 }
 
 function updatePokedex(pokeEntry) {
-     sprites.src = pokeEntry.sprites.front_default;
-     name.innerHTML = "n°" + pokeEntry.id + " " + pokeEntry.species.name;
-     //  type.innerHTML = pokeEntry.types
-     moves.innerHTML =
-          pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
+    sprites.src = pokeEntry.sprites.front_default;
+    name.innerHTML = "n°" + pokeEntry.id + " " + pokeEntry.species.name;
+    //  type.innerHTML = pokeEntry.types
+    moves.innerHTML =
+        pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
 }
 // next button function
 function nextPokemonButton() {}
+
+console.log('lol');
