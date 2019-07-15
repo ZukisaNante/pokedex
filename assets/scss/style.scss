@@ -2,27 +2,33 @@
      margin: 0px;
      font-size: 24px;
      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+     line-height: 1.2rem;
      text-align: center;
+     color: rgb(50, 34, 145);
 }
 
 body {
      width: 100vw;
      height: 100vh;
-     position: absolute;
 }
 
 #pokedex {
      position: relative;
+     display: flex;
      margin: auto;
      justify-content: center;
      align-items: center;
-
      width: 400px;
      height: 800px;
-
      background-image: url("../img/pokedex.png");
      background-size: cover;
      background-repeat: no-repeat;
+}
+
+.container {
+     position: relative;
+     justify-content: center;
+     margin: 0 auto;
 }
 
 #sprites {
