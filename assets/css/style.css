@@ -64,10 +64,10 @@ body {
 
 .dataContainer {
   position: relative;
+  top: -4%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 3rem;
 }
 
 #sprites {
@@ -79,11 +79,11 @@ body {
 
 #number {
   font-size: 0.8rem;
-  font-style: bold;
 }
 
 #name {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 #type {
@@ -91,7 +91,7 @@ body {
 }
 
 #moves {
-  margin-top: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .inputContainer {
