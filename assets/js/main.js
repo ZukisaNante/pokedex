@@ -19,9 +19,7 @@ input.addEventListener("keyup", key => {
 async function getPokedex(input) {
      let request = `https://pokeapi.co/api/v2/pokemon/${input}`;
      let response = await fetch(request, { mode: "cors" }).then(response => {
-          console.log(response);
           if (!response.ok) {
-               console.log("pokemon doesn't exist");
                alert("pokemon doesn't exist");
           }
           return response;
