@@ -1,4 +1,4 @@
-## #Pokedex
+### Pokedex
 
 https://cheungkinwong.github.io/pokedex/
 
