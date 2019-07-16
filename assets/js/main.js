@@ -6,6 +6,7 @@ const number = document.getElementById("number");
 const name = document.getElementById("name");
 const moves = document.getElementById("moves");
 const type = document.getElementById("type");
+let pokeID;
 
 input.addEventListener("keyup", key => {
      let pokemon = input.value.toLowerCase();
@@ -16,28 +17,32 @@ input.addEventListener("keyup", key => {
 
 async function getPokedex(input) {
      let request = `https://pokeapi.co/api/v2/pokemon/${input}`;
-     let requestSpecies = `https://pokeapi.co/api/v2/pokemon-species/${input}`;
      let response = await fetch(request, { mode: "cors" });
-     let responseSpecies = await fetch(requestSpecies, { mode: "cors" });
      let pokeEntry = await response.json();
-     let speciesEntry = await responseSpecies.json();
-     console.log(speciesEntry);
      await updatePokedex(pokeEntry);
 }
 
 function updatePokedex(pokeEntry) {
      console.log(pokeEntry);
+     pokeID = pokeEntry.id;
 
      sprites.src = pokeEntry.sprites.front_default;
-     number.innerHTML = "n°" + pokeEntry.id;
+     number.innerHTML = "n°" + pokeID;
      name.innerHTML = pokeEntry.species.name;
 
      type.innerHTML = " ";
      pokeEntry.types.forEach(name => {
-          console.log(name.type.name);
           type.innerHTML += name.type.name + " ";
      });
 
      moves.innerHTML =
           pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
+}
+
+document.getElementById("nextPokemon").addEventListener("click", nextPokemon);
+
+function nextPokemon() {
+     let nextID = pokeID + 1;
+     getPokedex(nextID);
+     console.log(pokeID, "lol");
 }
