@@ -5,7 +5,7 @@
   line-height: 1.2rem;
   text-align: center;
   text-transform: capitalize;
-  color: #4496a5;
+  color: #4476a5;
 }
 
 button {
@@ -101,7 +101,7 @@ body {
 }
 
 .fas {
-  color: #4496a5;
+  color: #4476a5;
 }
 
 @-webkit-keyframes fade {
