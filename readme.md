@@ -1,9 +1,10 @@
-### Pokedex
 
-https://cheungkinwong.github.io/pokedex/
+https://zukisanante.github.io/pokedex/
 
-## Exercise
-
+# Pokedex
+---
+## Exercise 
+>>>>>>> acd2a3f0e6ab485c9de5a7924124bbad9f0bc550
 > Make Pokedex using API.
 > FUNCTIONALITY => URS
 >
