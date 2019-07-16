@@ -4,7 +4,26 @@
      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
      line-height: 1.2rem;
      text-align: center;
-     color: rgb(50, 34, 145);
+
+     text-transform: capitalize;
+
+     color: rgb(68, 118, 165);
+}
+
+button {
+     all: unset;
+     font-size: 5rem;
+}
+
+input,
+textarea {
+     background: rgba(248, 248, 248, 0.616);
+     box-shadow: none;
+     border-radius: 0.4rem;
+}
+input:focus {
+     outline-offset: 0;
+     border-radius: 0.4rem;
 }
 
 body {
@@ -23,12 +42,14 @@ body {
      background-image: url("../img/pokedex.png");
      background-size: cover;
      background-repeat: no-repeat;
+     // animation: fade 2s linear;
 }
 
 .container {
      position: relative;
      justify-content: center;
-     margin: 0 auto;
+
+     margin-bottom: 3rem;
 }
 
 #sprites {
@@ -36,4 +57,66 @@ body {
      height: auto;
      background-size: cover;
      background-repeat: no-repeat;
+}
+
+
+#number {
+     font-size: 0.8rem;
+     font-style: bold;
+}
+
+#name {
+     font-size: 1.4rem;
+}
+
+#type {
+     margin-top: 0.5rem;
+}
+
+#moves {
+     margin-top: 0.8rem;
+}
+
+.inputContainer {
+     position: absolute;
+     top: 68%;
+}
+.fas {
+     color: rgb(68, 118, 165);
+}
+
+@keyframes fade {
+     0% {
+          opacity: 0;
+     }
+     100% {
+          opacity: 1;
+     }
+}
+
+@media only screen and (max-width: 400px) {
+     * {
+          font-size: 14px;
+     }
+}
+
+@media only screen and (max-height: 850px) {
+     * {
+          font-size: 14px;
+     }
+}
+@media only screen and (max-height: 580px) {
+     * {
+          font-size: 10px;
+     }
+}
+@media only screen and (max-height: 430px) {
+     * {
+          font-size: 8px;
+     }
+}
+@media only screen and (max-height: 340px) {
+     * {
+          font-size: 7px;
+     }
 }
