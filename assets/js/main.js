@@ -10,15 +10,14 @@ let pokeID;
 
 //run when enter is pressed
 input.addEventListener("keyup", key => {
-    let pokemon = input.value.toLowerCase();
-    if (key.keyCode == 13) {
-        getPokedex(pokemon);
-    }
+     let pokemon = input.value.toLowerCase();
+     if (key.keyCode == 13) {
+          getPokedex(pokemon);
+     }
 });
 
 //get json from pokeapi
 async function getPokedex(input) {
-
      let request = `https://pokeapi.co/api/v2/pokemon/${input}`;
      let response = await fetch(request, { mode: "cors" }).then(response => {
           if (!response.ok) {
@@ -33,11 +32,11 @@ async function getPokedex(input) {
 
 //display info in pokedex
 function updatePokedex(pokeEntry) {
+     pokeID = pokeEntry.id;
 
-    console.log(pokeEntry);
-    pokeID = pokeEntry.id;
-
-
+     sprites.src = pokeEntry.sprites.front_default;
+     number.innerHTML = "n°" + pokeID;
+     name.innerHTML = pokeEntry.species.name;
      input.value = pokeEntry.species.name;
 
      type.innerHTML = " ";
@@ -45,13 +44,8 @@ function updatePokedex(pokeEntry) {
           type.innerHTML += name.type.name + " ";
      });
 
-    type.innerHTML = " ";
-    pokeEntry.types.forEach(name => {
-        type.innerHTML += name.type.name + " ";
-    });
-
-    moves.innerHTML =
-        pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
+     moves.innerHTML =
+          pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
 }
 
 //buttons to get next and previous pokemon
@@ -60,7 +54,6 @@ document.getElementById("previousPokemon").addEventListener("click", previousPok
 
 //next pokemon
 function nextPokemon() {
-
      let nextID = pokeID + 1;
      getPokedex(nextID);
 }

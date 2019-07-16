@@ -29,6 +29,12 @@ input:focus {
 body {
      width: 100vw;
      height: 100vh;
+     background-image: url("../img/background.png");
+     background-size: cover;
+     background-repeat: no-repeat;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 #pokedex {
@@ -45,7 +51,7 @@ body {
      // animation: fade 2s linear;
 }
 
-.container {
+.dataContainer {
      position: relative;
      justify-content: center;
 
@@ -58,7 +64,6 @@ body {
      background-size: cover;
      background-repeat: no-repeat;
 }
-
 
 #number {
      font-size: 0.8rem;
