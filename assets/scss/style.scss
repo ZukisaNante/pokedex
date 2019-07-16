@@ -6,7 +6,23 @@
      text-align: center;
      text-transform: capitalize;
 
-     color: rgb(50, 34, 145);
+     color: rgb(68, 150, 165);
+}
+
+button {
+     all: unset;
+     font-size: 5rem;
+}
+
+input,
+textarea {
+     background: rgba(248, 248, 248, 0.616);
+     box-shadow: none;
+     border-radius: 0.4rem;
+}
+input:focus {
+     outline-offset: 0;
+     border-radius: 0.4rem;
 }
 
 body {
@@ -32,13 +48,13 @@ body {
      background-image: url("../img/pokedex.png");
      background-size: cover;
      background-repeat: no-repeat;
+     // animation: fade 2s linear;
 }
 
 .dataContainer {
      position: relative;
      justify-content: center;
      margin-bottom: 3rem;
-     animation: fade 2ms ease-in;
 }
 
 #sprites {
@@ -50,17 +66,27 @@ body {
 
 #number {
      font-size: 0.8rem;
+     font-style: bold;
 }
 
 #name {
      font-size: 1.4rem;
 }
+
 #type {
      margin-top: 0.5rem;
 }
 
 #moves {
      margin-top: 0.8rem;
+}
+
+.inputContainer {
+     position: absolute;
+     top: 68%;
+}
+.fas {
+     color: rgb(68, 150, 165);
 }
 
 @keyframes fade {

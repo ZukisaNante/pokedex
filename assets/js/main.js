@@ -7,6 +7,7 @@ const name = document.getElementById("name");
 const moves = document.getElementById("moves");
 const type = document.getElementById("type");
 let pokeID;
+let pokeName;
 
 input.addEventListener("keyup", key => {
      let pokemon = input.value.toLowerCase();
@@ -17,18 +18,29 @@ input.addEventListener("keyup", key => {
 
 async function getPokedex(input) {
      let request = `https://pokeapi.co/api/v2/pokemon/${input}`;
-     let response = await fetch(request, { mode: "cors" });
+     let response = await fetch(request, { mode: "cors" }).then(response => {
+          console.log(response);
+          if (!response.ok) {
+               console.log("pokemon doesn't exist");
+               alert("pokemon doesn't exist");
+          }
+          return response;
+     });
      let pokeEntry = await response.json();
+
      await updatePokedex(pokeEntry);
 }
 
 function updatePokedex(pokeEntry) {
      console.log(pokeEntry);
      pokeID = pokeEntry.id;
+     pokeName = pokeEntry.species.name;
 
      sprites.src = pokeEntry.sprites.front_default;
      number.innerHTML = "n°" + pokeID;
-     name.innerHTML = pokeEntry.species.name;
+     name.innerHTML = pokeName;
+
+     input.value = pokeName;
 
      type.innerHTML = " ";
      pokeEntry.types.forEach(name => {
@@ -40,9 +52,14 @@ function updatePokedex(pokeEntry) {
 }
 
 document.getElementById("nextPokemon").addEventListener("click", nextPokemon);
+document.getElementById("previousPokemon").addEventListener("click", previousPokemon);
 
 function nextPokemon() {
      let nextID = pokeID + 1;
      getPokedex(nextID);
-     console.log(pokeID, "lol");
+}
+
+function previousPokemon() {
+     let previousID = pokeID - 1;
+     getPokedex(previousID);
 }
