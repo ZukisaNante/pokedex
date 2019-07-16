@@ -29,6 +29,12 @@ input:focus {
 body {
      width: 100vw;
      height: 100vh;
+     background-image: url("../img/background.png");
+     background-size: cover;
+     background-repeat: no-repeat;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 #pokedex {
@@ -45,11 +51,10 @@ body {
      // animation: fade 2s linear;
 }
 
-.container {
+.dataContainer {
      position: relative;
+     top: -4%;
      justify-content: center;
-
-     margin-bottom: 3rem;
 }
 
 #sprites {
@@ -59,14 +64,13 @@ body {
      background-repeat: no-repeat;
 }
 
-
 #number {
      font-size: 0.8rem;
-     font-style: bold;
 }
 
 #name {
-     font-size: 1.4rem;
+     font-size: 1.2rem;
+     font-weight: bold;
 }
 
 #type {
@@ -74,7 +78,7 @@ body {
 }
 
 #moves {
-     margin-top: 0.8rem;
+     margin-top: 0.5rem;
 }
 
 .inputContainer {
