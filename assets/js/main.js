@@ -29,12 +29,6 @@ function updatePokedex(pokeEntry) {
         pokeEntry.moves[0].move.name + "<br>" + pokeEntry.moves[1].move.name + "<br>" + pokeEntry.moves[2].move.name + "<br>" + pokeEntry.moves[3].move.name;
 }
 // next button function
-document.getElementsByClassName("nextPokemon").addEventListener("click", showSprite);
+document.querySelector(".nextPokemon").addEventListener("click", showSprite);
 
-function showSprite() {
-    document.getElementById('sprites').innerHTML = pokeEntry.id + 1;
-}
-
-//}
-
-//nextPokemonButton();
+function showSprite() {}
