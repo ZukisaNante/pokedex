@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./assets/css/style.min.css" />
-    <title>Pokedex</title>
-</head>
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+          <link rel="stylesheet" href="./assets/css/style.min.css" />
 
-<body>
-    <div class="container">
-
-        <input type="text" id="input" placeholder="Enter input & hit Enter" />
-        <div id="pokedex">
-            <div class="dataContainer">
-                <image id="sprites"></image>
-                <image id="familySprites"></image>
-                <div id="number"></div>
-                <div id="name"></div>
-                <div id="type"></div>
-                <div id="moves"></div>
-            </div>
-        </div>
-        <button id="nextPokemon">next</button>
-    </div>
-</body>
-<script src="./assets/js/main.js"></script>
-
+          <title>Pokedex</title>
+     </head>
+     <body>
+          <div class="container">
+               <div id="pokedex">
+                    <div class="dataContainer">
+                         <image id="sprites"></image>
+                         <image id="familySprites"></image>
+                         <div id="number"></div>
+                         <div id="name"></div>
+                         <div id="type"></div>
+                         <div id="moves"></div>
+                    </div>
+                    <div class="inputContainer">
+                         <button id="previousPokemon"><i class="fas fa-chevron-left"> </i></button>
+                         <input type="text" id="input" placeholder="Search pokedex" />
+                         <button id="nextPokemon"><i class="fas fa-chevron-right"> </i></button>
+                    </div>
+               </div>
+          </div>
+     </body>
+     <script src="./assets/js/main.js"></script>
+     <script src="https://kit.fontawesome.com/5791800d29.js"></script>
 </html>

@@ -41,3 +41,4 @@
 > Special thanks to Kin for his JS skills.
 > Special thanks to the BeCode colleagues for their willingness to help where needed.
 > The project was a success and the skills on JS and how to use API(s) have been improved.
+
