@@ -1,5 +1,7 @@
 ## #Pokedex
 
+https://cheungkinwong.github.io/pokedex/
+
 ## Exercise
 
 > Make Pokedex using API.
